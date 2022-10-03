@@ -1,0 +1,18 @@
+from time import sleep
+from threading import *
+class mul(Thread):
+    def run(self):
+        for i in range(3):
+            print(2*i)
+            sleep(1)
+class mull(Thread):
+    def run(self):
+        for i in range(3):
+            print(3*i)
+            sleep(1)
+obj1=mul()
+obj2=mull()
+
+obj1.start()
+sleep(0.2)
+obj2.start()
