@@ -1,0 +1,15 @@
+class mynumber:
+    def __init__(self):
+        self.b=1
+    def __iter__(self):
+        return self
+    def __next__(self):
+       if self.b<=10:
+           a=self.b
+           self.b+=1
+           return a
+       else:
+            raise StopIteration
+c=mynumber()
+for i in c:
+    print(i)
